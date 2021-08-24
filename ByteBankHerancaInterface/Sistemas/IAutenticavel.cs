@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ByteBankHerancaInterface.Sistemas
 {
-    public interface Autenticavel
+    public interface IAutenticavel
     {
          bool Autenticar(string senha);
     }
