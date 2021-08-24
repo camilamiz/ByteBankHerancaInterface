@@ -1,4 +1,5 @@
 ﻿using ByteBankHerancaInterface.Funcionarios;
+using ByteBankHerancaInterface.Sistemas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,8 +45,10 @@ namespace ByteBankHerancaInterface
             //Console.WriteLine(roberta.GetBonificacao());
 
             //Console.WriteLine("Total de bonificações: " + gerenciador.GetTotalBonificacao());
-            
-            CalcularBonificacao();
+
+            //CalcularBonificacao();
+
+            UsarSistema();
 
             Console.ReadLine();
         }
@@ -78,6 +81,25 @@ namespace ByteBankHerancaInterface
             gerenciadorBonificacao.Registrar(guilherme);
 
             Console.WriteLine("Total de bonificações do mês " + gerenciadorBonificacao.GetTotalBonificacao());
+        }
+
+        public static void UsarSistema()
+        {
+            SistemaInterno sistemaInterno = new SistemaInterno();
+            Diretor roberta = new Diretor("833.222.049-39");
+            roberta.Nome = "Roberta";
+            roberta.Senha = "123";
+
+            GerenteDeConta camila = new GerenteDeConta("833.222.100-39");
+            camila.Nome = "Camila";
+            camila.Senha = "abc";
+
+            ParceiroComercial parceiro = new ParceiroComercial();
+            parceiro.Senha = "123456";
+
+            sistemaInterno.Logar(roberta, "123");
+            sistemaInterno.Logar(camila, "abc");
+            sistemaInterno.Logar(parceiro, "123456");
         }
     }
 }

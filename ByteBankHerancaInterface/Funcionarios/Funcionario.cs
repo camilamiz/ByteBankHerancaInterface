@@ -23,7 +23,7 @@ namespace ByteBankHerancaInterface.Funcionarios
 
             Salario = salario;
             CPF = cpf; //cpf obrigatório e alterável somente na classe funcionário
-            //desse modo, em Program, eu modo o cpf como parâmetro da classe na hora da criação
+            //desse modo, em Program, eu preencho o cpf como parâmetro da classe na hora da criação
 
             TotalDeFuncionarios++;
         }

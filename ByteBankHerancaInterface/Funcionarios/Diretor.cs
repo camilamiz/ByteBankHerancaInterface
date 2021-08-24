@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ByteBankHerancaInterface.Sistemas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace ByteBankHerancaInterface.Funcionarios
 {
-    public class Diretor : Funcionario
+    //primeiro herda a classe e depois a interface
+    //não existe herança múltipla em C#
+    public class Diretor : FuncionarioAutenticavel
     {
         //necessário colocar desta maneira, pois estamos colocando o cpf como obrigatório no
         //construtor da classe base Funcionario
